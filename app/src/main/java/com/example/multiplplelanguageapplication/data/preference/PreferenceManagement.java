@@ -2,12 +2,11 @@ package com.example.multiplplelanguageapplication.data.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import androidx.annotation.NonNull;
 
 public class PreferenceManagement {
 
-    private SharedPreferences sharedPreferences;
+    private final SharedPreferences sharedPreferences;
 
     public PreferenceManagement(Context context) {
         sharedPreferences = context.getSharedPreferences("MyPreference" , Context.MODE_PRIVATE);
@@ -20,6 +19,6 @@ public class PreferenceManagement {
     }
 
     public String getString(@NonNull String key) {
-        return sharedPreferences.getString(key , null);
+        return sharedPreferences.getString(key , "English");
     }
 }

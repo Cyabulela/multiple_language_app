@@ -1,12 +1,12 @@
 package com.example.multiplplelanguageapplication.data;
 
-public enum Languages {
+public enum Language {
     English("English"),
     IsiZulu("Zulu"),
     Afrikaans("Afrikaans");
 
     private String language;
-    Languages(String language) {
+    Language(String language) {
         this.language = language;
     }
 

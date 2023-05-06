@@ -1,33 +1,34 @@
 package com.example.multiplplelanguageapplication.data.repository;
 
-import com.example.multiplplelanguageapplication.data.Languages;
+import com.example.multiplplelanguageapplication.data.Language;
 import com.example.multiplplelanguageapplication.data.preference.PreferenceManagement;
 import com.example.multiplplelanguageapplication.domain.repository.LanguageConfig;
 import com.example.multiplplelanguageapplication.util.Constant;
 
 public class LanguageConfigImpl implements LanguageConfig {
 
-    private PreferenceManagement preferenceManagement;
+    private final PreferenceManagement preferenceManagement;
 
     public LanguageConfigImpl(PreferenceManagement preferenceManagement) {
         this.preferenceManagement = preferenceManagement;
     }
 
     @Override
-    public Languages getSelectedLanguage() {
+    public Language getSelectedLanguage() {
         String language = preferenceManagement.getString(Constant.KEY_COLLECTION_LANGUAGE);
+        language = (language != null)? language : "English";
         switch (language) {
             case "Zulu":
-                return Languages.IsiZulu;
+                return Language.IsiZulu;
             case "Afrikaans":
-                return Languages.Afrikaans;
+                return Language.Afrikaans;
             default:
-                return Languages.English;
+                return Language.English;
         }
     }
 
     @Override
-    public void changeLanguage(Languages language) {
+    public void changeLanguage(Language language) {
         preferenceManagement.putString(Constant.KEY_COLLECTION_LANGUAGE , language.getLanguage());
     }
 }

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Multiplple Language Application</string>
+    <string name="english_first_screen_text">Click button to continue</string>
+    <string name="english_second_screen_text">Welcome to page 2</string>
+    <string name="english_button">Button</string>
+    <string name="zulu_first_screen_text">Chofoza inkinobho ukuze uqhubeke</string>
+    <string name="zulu_second_screen_text">Wamukelekile ekhasini lesi-2</string>
+    <string name="zulu_button">Inkinobho</string>
+    <string name="afrikaans_first_screen_text">Klik knoppie om Voort te gaan</string>
+    <string name="afrikaans_second_screen_text">Welkom op bladsy 2</string>
+    <string name="afrikaans_button">Knoppie</string>
+    <string name="afrikaans">Afrikaans</string>
+    <string name="menu">menu</string>
+    <string name="zulu">Zulu</string>
+    <string name="english">English</string>
 </resources>
